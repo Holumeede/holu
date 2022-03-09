@@ -1,0 +1,178 @@
+:root {
+    --light-blue: #f0f4ff;
+    --blue: #0938b1;
+    --white: #fff;
+    --black: #000;
+    --font-dark: 700;
+    --font-norm: 400;
+    --l-black: #2c2c2c;
+    --inter: 'Inter', sans-serif;
+    --fs: 1.2rem;
+}
+
+/* border box model: url: https://css-tricks.com/box-sizing */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: o;
+    margin: 0;
+    font-family: var(--inter);
+    background-color: var(--white);
+    font-size: var(--fs);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/* navigation */
+
+nav {
+    font-family: var(--inter);
+    padding: 1rem;
+    font-size: 80%;
+    background-color: var(--light-blue);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--blue);
+}
+
+nav li:first-child {
+    flex-basis: 80%;
+}
+
+nav li button {
+    background-color: var(--blue);
+    width: 100px;
+    height: 40px;
+    color: var(--white);
+
+}
+
+nav li:first-child span {
+    font-weight: var(--font-norm);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+@media all and (max-width:414px) {
+    nav {
+        width: 414px;
+    }
+
+    .container {
+        width: 414px;
+        display: block;
+        flex-flow: row wrap;
+        position: absolute;
+    }
+
+    .container-img {
+    
+    }
+
+    .container-text {
+        margin: 800px 0 0 50px;
+    }
+}
+
+.container-text {
+    flex-basis: 40%;
+    margin: 130px 0 0 50px;
+    padding: 30px;
+    font-family: var(--inter);
+}
+
+.container h2 {
+    font-weight: var(--font-dark);
+    /* justify-content: left; */
+    left: 10px;
+    line-height: 46px;
+    /* border: 1px solid red; */
+    font-size: 40px;
+}
+
+.container .text-p {
+    font-weight: var(--font-norm);
+    font-size: 18px;
+    line-height: 30px;
+
+}
+
+.container .btn {
+    width: 290px;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--white);
+    margin: 70px 0;
+}
+
+.btn .sign-btn {
+    width: 168px;
+    height: 50px;
+    background-color: var(--white);
+    outline: none;
+    border: 2px solid #0938B1;
+    font-family: var(--inter);
+    font-weight: var(--font-dark);
+    font-size: 15px;
+    color: var(--blue);
+}
+
+.btn .join-btn {
+    width: 240px;
+    height: 50px;
+    color: var(--white);
+    background-color: var(--blue);
+    font-weight: var(--font-dark);
+    font-size: 15px;
+}
+
+.container .chat {
+    width: 350px;
+    border: 2px solid #F2BD00;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 180px;
+}
+
+.chat p {
+    flex-basis: 60%;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: var(--font-norm);
+    
+}
+
+.container-img{
+    margin: 20px 0 0 0;
+}
